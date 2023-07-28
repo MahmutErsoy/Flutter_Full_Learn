@@ -7,7 +7,7 @@ class LightTheme {
   LightTheme() {
     //classı kullanabilmek icin constructurda temayı yarattık
     theme = ThemeData(
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.vertical(bottom: Radius.circular(20)))),
         scaffoldBackgroundColor: Colors.white,
         checkboxTheme: CheckboxThemeData(
@@ -17,14 +17,14 @@ class LightTheme {
         buttonTheme: ButtonThemeData(
             colorScheme:
                 ColorScheme.light(onPrimary: LightColor()._textColor, onSecondary: LightColor()._saphireSplendour)),
-        colorScheme: ColorScheme.light(),
-        floatingActionButtonTheme: FloatingActionButtonThemeData(backgroundColor: Colors.green),
+        colorScheme: const ColorScheme.light(),
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(backgroundColor: Colors.green),
         textTheme:
-            ThemeData.light().textTheme.copyWith(subtitle1: TextStyle(fontSize: 25, color: _lightColor._textColor)));
+            ThemeData.light().textTheme.copyWith(titleMedium: TextStyle(fontSize: 25, color: _lightColor._textColor)));
   }
 }
 
 class LightColor {
   final Color _textColor = Colors.black;
-  final Color _saphireSplendour = Color.fromARGB(255, 135, 40, 183);
+  final Color _saphireSplendour = const Color.fromARGB(255, 135, 40, 183);
 }

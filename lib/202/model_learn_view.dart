@@ -37,8 +37,8 @@ class _ModelLearnViewState extends State<ModelLearnView> {
 
     final user7 = PostModel7();
 
-    // servisten data çekiyorsan en mantıklısı bu
-    final user8 = PostModel8(body: "a");
+    // ignore: unused_local_variable
+    final user8 = PostModel8(body: "a"); // servisten data çekiyorsan en mantıklısı bu
   }
 
   @override

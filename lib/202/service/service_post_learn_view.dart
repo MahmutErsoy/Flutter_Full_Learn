@@ -54,17 +54,17 @@ class _ServicePostLearnState extends State<ServicePostLearn> {
           children: [
             TextField(
                 controller: _titleController,
-                decoration: InputDecoration(labelText: 'Title'),
+                decoration: const InputDecoration(labelText: 'Title'),
                 keyboardType: TextInputType.text,
                 textInputAction: TextInputAction.next),
             TextField(
                 controller: _bodyController,
                 textInputAction: TextInputAction.next,
-                decoration: InputDecoration(labelText: 'Body')),
+                decoration: const InputDecoration(labelText: 'Body')),
             TextField(
                 controller: _userIdController,
                 keyboardType: TextInputType.number,
-                decoration: InputDecoration(labelText: 'UserId')),
+                decoration: const InputDecoration(labelText: 'UserId')),
             TextButton(
                 onPressed: _isLoading
                     ? null
@@ -80,7 +80,7 @@ class _ServicePostLearnState extends State<ServicePostLearn> {
                           _addItemToService(model);
                         }
                       },
-                child: Text("Send"))
+                child: const Text("Send"))
           ],
         ));
   }

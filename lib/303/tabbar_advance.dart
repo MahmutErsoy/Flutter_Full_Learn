@@ -14,8 +14,8 @@ class _TabLearnState extends State<TabAdvanceLearn> with TickerProviderStateMixi
   final double _notchedValue = 10;
   @override
   void initState() {
-    super.initState();
     _tabController = TabController(length: _MyTabViews.values.length, vsync: this);
+    super.initState();
   }
 
   @override
@@ -45,9 +45,15 @@ class _TabLearnState extends State<TabAdvanceLearn> with TickerProviderStateMixi
 
   TabBarView _tabbarView() {
     return TabBarView(
-        physics: const NeverScrollableScrollPhysics(),
-        controller: _tabController,
-        children: [const FeedView(), IconLearnView(), IconLearnView(), IconLearnView()]);
+      physics: const NeverScrollableScrollPhysics(),
+      controller: _tabController,
+      children: [
+        const FeedView(),
+        IconLearnView(),
+        IconLearnView(),
+        IconLearnView(),
+      ],
+    );
   }
 }
 

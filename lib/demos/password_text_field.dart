@@ -20,12 +20,17 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      controller: widget.controller,
-      autofillHints: [AutofillHints.password],
-      keyboardType: TextInputType.visiblePassword,
-      obscureText: _isSecure, // girilen text gözükmez
-      decoration: InputDecoration(border: UnderlineInputBorder(), hintText: "Password", suffix: _onVisibilityIcon()),
+    return Scaffold(
+      body: Center(
+        child: TextField(
+          controller: widget.controller,
+          autofillHints: const [AutofillHints.password],
+          keyboardType: TextInputType.visiblePassword,
+          obscureText: _isSecure, // girilen text gözükmez
+          decoration:
+              InputDecoration(border: const UnderlineInputBorder(), hintText: "Password", suffix: _onVisibilityIcon()),
+        ),
+      ),
     );
   }
 

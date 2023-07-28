@@ -24,21 +24,21 @@ class ColumnRowLearn extends StatelessWidget {
                 ],
               )),
           const Spacer(flex: 2),
-          Expanded(
+          const Expanded(
               flex: 2, // flex e 2 verdik ekranın yatay ve dikey de yüzde 20 sini  kaplar.
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: const [
+                children: [
                   Text('a'),
                   Text('a2'),
                   Text('a3'),
                 ],
               )),
-          SizedBox(
+          const SizedBox(
             height: ProjectContainerSizes.cardHeight,
             child: Column(
-              children: const [
+              children: [
                 Expanded(child: Text('data')),
                 Expanded(child: Text('data')),
                 Expanded(child: Text('data')),

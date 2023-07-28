@@ -49,7 +49,9 @@ class PostService implements IPostService {
 
       return response.statusCode == HttpStatus.ok;
     } on DioException catch (error) {
-      print(error.message);
+      if (kDebugMode) {
+        print(error.message);
+      }
     } //
     return false;
   }

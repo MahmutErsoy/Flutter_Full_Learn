@@ -1,7 +1,5 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn/101/list_view_learn.dart';
-import 'package:flutter_full_learn/202/image_learn_202.dart';
 
 class SheetLearn extends StatefulWidget {
   const SheetLearn({super.key});
@@ -21,7 +19,7 @@ class _SheetLearnState extends State<SheetLearn> with ProductSheetMixin {
       body: Center(
         child: TextButton(
             onPressed: () {
-              showCustomSheet(context, ListViewLearn());
+              showCustomSheet(context, const ListViewLearn());
             },
             child: const Text("Show")),
       ),
@@ -133,7 +131,7 @@ class _CustomMainSheet extends StatelessWidget {
   }) : super(key: key);
 
   final Widget child;
-  Color _backgrounColor = Colors.white;
+  final Color _backgrounColor = Colors.white;
 
   @override
   Widget build(BuildContext context) {

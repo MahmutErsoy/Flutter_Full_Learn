@@ -16,15 +16,16 @@ class _FeedViewState extends State<FeedView> with AutomaticKeepAliveClientMixin 
   Widget build(BuildContext context) {
     super.build(context);
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.ac_unit))],
+      ),
       body: FutureBuilder<List<PostModel>?>(
         future: _postService.fetchPostItemsAdvance(),
         builder: (BuildContext context, AsyncSnapshot<List<PostModel>?> snapshot) {
           switch (snapshot.connectionState) {
             case ConnectionState.none:
-              return Placeholder();
+              return const Placeholder();
             case ConnectionState.waiting:
-
             case ConnectionState.active:
               return const Center(child: CircularProgressIndicator());
             case ConnectionState.done:
@@ -40,7 +41,7 @@ class _FeedViewState extends State<FeedView> with AutomaticKeepAliveClientMixin 
                   },
                 );
               } else {
-                return Placeholder();
+                return const Placeholder();
               }
           }
         },
@@ -49,6 +50,5 @@ class _FeedViewState extends State<FeedView> with AutomaticKeepAliveClientMixin 
   }
 
   @override
-  // TODO: implement wantKeepAlive
   bool get wantKeepAlive => true;
 }

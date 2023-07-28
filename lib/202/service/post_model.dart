@@ -11,7 +11,7 @@ class PostModel {
     id = json['id'];
     title = json['title'];
     body = json[
-        'body']; //postmandan gelen datalar MAPtir ve bizizm bu dataları kullanabilmemiz icin jsondan liste, modele cevirmemiz gerekir.
+        'body']; //postmandan gelen datalar MAPtir ve bizim bu dataları kullanabilmemiz icin jsondan liste, modele cevirmemiz gerekir.
   }
 
   Map<String, dynamic> toJson() {

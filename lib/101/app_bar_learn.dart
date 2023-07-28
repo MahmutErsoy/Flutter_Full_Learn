@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class AppBarLearnView extends StatelessWidget {
   const AppBarLearnView({super.key});
@@ -24,7 +23,7 @@ class AppBarLearnView extends StatelessWidget {
           const Center(child: CircularProgressIndicator())
         ],
       ),
-      body: Column(children: const []),
+      body: const Column(children: []),
     );
   }
 }

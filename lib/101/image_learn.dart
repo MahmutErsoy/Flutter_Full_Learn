@@ -10,7 +10,7 @@ class ImageLearn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      drawer: Drawer(),
+      drawer: const Drawer(),
       body: Column(
         children: [
           SizedBox(

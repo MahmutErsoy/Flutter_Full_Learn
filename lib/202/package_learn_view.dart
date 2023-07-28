@@ -14,7 +14,7 @@ class _PackageLearnViewState extends State<PackageLearnView> with TickerProvider
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: LoadingBar(),
+      body: const LoadingBar(),
     );
   }
 }

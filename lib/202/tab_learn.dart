@@ -29,7 +29,7 @@ class _TabLearnState extends State<TabLearn> with TickerProviderStateMixin {
           }),
           bottomNavigationBar: BottomAppBar(
             notchMargin: _notchedValue,
-            shape: CircularNotchedRectangle(),
+            shape: const CircularNotchedRectangle(),
             child: _myTabView(),
           ),
           appBar: AppBar(
@@ -43,12 +43,12 @@ class _TabLearnState extends State<TabLearn> with TickerProviderStateMixin {
     return TabBar(
         indicatorColor: Colors.white,
         controller: _tabController,
-        tabs: _MyTabViews.values.map((e) => Tab(text: "${e.name}")).toList());
+        tabs: _MyTabViews.values.map((e) => Tab(text: e.name)).toList());
   }
 
   TabBarView _tabbarView() {
     return TabBarView(
-        physics: NeverScrollableScrollPhysics(), // sayfayı yana kaydırma ile değiştirmeyi engeller
+        physics: const NeverScrollableScrollPhysics(), // sayfayı yana kaydırma ile değiştirmeyi engeller
         controller: _tabController,
         children: [
           Container(color: Colors.red),

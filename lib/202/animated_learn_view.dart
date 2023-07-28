@@ -60,7 +60,10 @@ class _AnimatedLearnViewState extends State<AnimatedLearnView> with TickerProvid
                   const TextStyle(),
               duration: _DurationItems.durationLow,
               child: const Text("data")),
-          AnimatedIcon(icon: AnimatedIcons.menu_close, progress: controller),
+          AnimatedIcon(
+            icon: AnimatedIcons.menu_close,
+            progress: controller,
+          ),
           AnimatedContainer(
             duration: _DurationItems.durationLow,
             height: _isVisible
@@ -71,11 +74,11 @@ class _AnimatedLearnViewState extends State<AnimatedLearnView> with TickerProvid
             width: MediaQuery.of(context).size.height * 0.2,
             color: Colors.blue,
           ),
-          Expanded(
+          const Expanded(
               child: Stack(
-            children: const [
+            children: [
               AnimatedPositioned(
-                  top: 10, curve: Curves.elasticOut, child: Text("data"), duration: _DurationItems.durationLow)
+                  top: 10, curve: Curves.elasticOut, duration: _DurationItems.durationLow, child: Text("data"))
             ],
           )),
           Expanded(
