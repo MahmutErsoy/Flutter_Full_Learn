@@ -5,6 +5,7 @@ import 'package:flutter_full_learn/product/global/theme_notifier.dart';
 import 'package:provider/provider.dart';
 
 import '303/lottie_learn.dart';
+import 'product/constants/project_items.dart';
 
 void main() {
   runApp(MultiProvider(
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: ProjectItems.projectName,
       debugShowCheckedModeBanner: false,
       theme: context.watch<ThemeNotifier>().currentTheme,
       /*ThemeData.dark().copyWith(
